@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CHROME_DRIVER=/usr/bin/chromedriver
+JAVA_BINARY=/usr/bin/java
+SELENIUM_SERVER_JAR=/usr/bin/selenium-server-standalone.jar
+
+case $1 in
+
+    start)
+        $JAVA_BINARY -Dwebdriver.chrome="$CHROME_DRIVER" -jar $SELENIUM_SERVER_JAR
+    ;;
+esac
